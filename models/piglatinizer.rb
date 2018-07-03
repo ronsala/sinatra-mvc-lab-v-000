@@ -1,5 +1,4 @@
 class PigLatinizer
-  attr_accessor :user_phrase, :piglatinized
 
   def piglatinize(user_phrase)
     vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']
