@@ -2,9 +2,8 @@ class PigLatinizer
   attr_accessor :user_phrase, :piglatinized
 
   def piglatinize(user_phrase)
-    downcased = user_phrase.downcase
-    vowels = ['a', 'e', 'i', 'o', 'u']
-    words = downcased.split(' ')
+    vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']
+    words = user_phrase.split(' ')
     result = []
 
     words.each_with_index do |word, i|
@@ -38,20 +37,16 @@ class PigLatinizer
             end
             count += 1
           end
-      end
+        end
       # translation of consonant words without qu
-      if not qu
-        translation = words[i][count..words[i].length] + translation + 'ay'
-        result.push(translation)
+        if not qu
+          translation = words[i][count..words[i].length] + translation + 'ay'
+          result.push(translation)
+        end
       end
-    end
 
     end
-    if user_phrase[0].match(/[A-Z]/)
-      result.join(' ').capitalize
-    else
-      result.join(' ')
-    end
+    result.join(' ')
   end
 
 end
