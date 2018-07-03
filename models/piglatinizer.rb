@@ -48,9 +48,9 @@ class PigLatinizer
 
     end
     if user_phrase[0].match(/[A-Z]/)
-      @piglatinized = result.join(' ').capitalize
+      result.join(' ').capitalize
     else
-      @piglatinized = result.join(' ')
+      result.join(' ')
     end
   end
 
