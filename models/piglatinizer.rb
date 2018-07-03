@@ -1,5 +1,5 @@
 class PigLatinizer
-  attr_accessor :user_phrase
+  attr_accessor :user_phrase, :piglatinized
 
   def piglatinize(user_phrase)
     downcased = user_phrase.downcase
@@ -48,9 +48,9 @@ class PigLatinizer
 
     end
     if user_phrase[0].match(/[A-Z]/)
-      result.join(' ').capitalize
+      @piglatinized = result.join(' ').capitalize
     else
-      result.join(' ')
+      @piglatinized = result.join(' ')
     end
   end
 
