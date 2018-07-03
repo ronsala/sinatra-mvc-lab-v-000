@@ -1,4 +1,5 @@
 class PigLatinizer
+  attr_accessor :user_phrase
 
   # def initialize(str)
   #   end_str = ''
@@ -13,8 +14,11 @@ class PigLatinizer
   #   end
   # end
 
-    def initialize(str)
-      str = str.downcase
+
+    def initialize(user_phrase)
+    end
+      # @user_phrase = user_phrase.downcase
+      # str = str.downcase
       # vowels = ['a', 'e', 'i', 'o', 'u']
       # words = str.split(' ')
       # result = []
@@ -60,6 +64,5 @@ class PigLatinizer
       #
       # end
       # result.join(' ')
-    end
 
 end
